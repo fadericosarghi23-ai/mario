@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import ProcessCards from '../components/ProcessCards.astro';
+import Cta from '../components/Cta.astro';
+import { progetto, categorie } from '../data/progetti';
+import { fasi } from '../data/contenuti';
+
+// La pagina /metodo/ ospita il metodo di lavoro e le 9 pitture e finiture (vedi src/data/contenuti.ts).
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Metodo', href: '/metodo/' }];
+const hero = progetto('pittura-antimuffa').immagini[0];
+---
+<Layout title="Come lavoriamo | Impresa Edile Mario, Savona" description="Consulenza, preventivo gratuito, preparazione delle superfici e lavori rapidi. Idropitture, pitture antimuffa, stucco veneziano e pietra viva." ogType="article" transparent crumbs={crumbs}>
+<PageHero img={hero} crumbs={crumbs} eyebrow="Metodo"> <h1 class="h1-page">Come lavoriamo</h1> <p class="lead">Consulenza, preventivo gratuito, preparazione accurata e lavori rapidi, in sicurezza.</p> </PageHero>
+<section class="section"> <div class="container"> <ProcessCards h="h2" /> </div> </section>
+<section class="section bg-sand"> <div class="container"> <div class="section-head reveal"> <div> <p class="eyebrow mb-2">Pitture e finiture</p> <h2 class="h2">Nove finiture per ogni ambiente</h2> <p class="lead mt-2">Pitture tecniche e decorative, scelte in base alla superficie, all’ambiente e al risultato che cerchi.</p> </div> <a href={`/progetti/${categorie[2].slug}/`} class="btn btn-primary">Vedi i lavori di finitura</a> </div> <ol class="steps"> {fasi.map((f, i) => <li id={`fase-${i + 1}`} class="reveal" style={`transition-delay:${(i % 3) * 60}ms`}> <span class="n">{String(i + 1).padStart(2, '0')}</span> <h3 class="h4">{f.titolo}</h3> <p>{f.testo}</p> </li>)} </ol> </div> </section>
+<Cta />
+</Layout>

@@ -1,0 +1,9 @@
+---
+/** Le 4 tappe del metodo su card scure con foto (home + /metodo/). */
+import Picture from './Picture.astro';
+import { tappe } from '../data/contenuti';
+interface Props { h?: 'h2' | 'h3' }
+const { h = 'h3' } = Astro.props;
+const H = h;
+---
+<ol class="process"> {tappe.map((t, i) => <li class="process-card reveal" style={`transition-delay:${i * 60}ms`}> <Picture img={t.img} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" /> <span class="num">{String(i + 1).padStart(2, '0')}</span> <H class="h4">{t.titolo}</H> <p>{t.testo}</p> </li>)} </ol>

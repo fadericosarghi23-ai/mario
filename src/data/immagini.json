@@ -1,0 +1,487 @@
+{
+ "_nota": "Foto d'esempio da Unsplash (scripts/foto-unsplash.mjs): sostituire con le foto dei lavori veri.",
+ "progetti": {
+  "ristrutturazione-appartamento": [
+   {
+    "src": "/img/lavori/ristrutturazione-appartamento/ristrutturazione-appartamento-01-1200.jpg",
+    "width": 2000,
+    "height": 2666,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1656122381069-9ec666d95cf1"
+   },
+   {
+    "src": "/img/lavori/ristrutturazione-appartamento/ristrutturazione-appartamento-02-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1560185127-6ed189bf02f4"
+   },
+   {
+    "src": "/img/lavori/ristrutturazione-appartamento/ristrutturazione-appartamento-03-1200.jpg",
+    "width": 2000,
+    "height": 2669,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1768321901750-f7b96d774456"
+   }
+  ],
+  "rifacimento-bagno": [
+   {
+    "src": "/img/lavori/rifacimento-bagno/rifacimento-bagno-01-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1584622650111-993a426fbf0a"
+   },
+   {
+    "src": "/img/lavori/rifacimento-bagno/rifacimento-bagno-02-1200.jpg",
+    "width": 2000,
+    "height": 2999,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1782805153046-88e60379e231"
+   }
+  ],
+  "rinnovo-cucina": [
+   {
+    "src": "/img/lavori/rinnovo-cucina/rinnovo-cucina-01-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1565183928294-7063f23ce0f8"
+   },
+   {
+    "src": "/img/lavori/rinnovo-cucina/rinnovo-cucina-02-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1618832515490-e181c4794a45"
+   },
+   {
+    "src": "/img/lavori/rinnovo-cucina/rinnovo-cucina-03-1200.jpg",
+    "width": 2000,
+    "height": 2667,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1600684388091-627109f3cd60"
+   }
+  ],
+  "controsoffitti-cartongesso": [
+   {
+    "src": "/img/lavori/controsoffitti-cartongesso/controsoffitti-cartongesso-01-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1582203423341-64b918240e25"
+   },
+   {
+    "src": "/img/lavori/controsoffitti-cartongesso/controsoffitti-cartongesso-02-1200.jpg",
+    "width": 2000,
+    "height": 2667,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1768321903410-54961e343b71"
+   },
+   {
+    "src": "/img/lavori/controsoffitti-cartongesso/controsoffitti-cartongesso-03-1200.jpg",
+    "width": 2000,
+    "height": 2669,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1768321902000-a014139dc9be"
+   }
+  ],
+  "tinteggiatura-facciata": [
+   {
+    "src": "/img/lavori/tinteggiatura-facciata/tinteggiatura-facciata-01-1200.jpg",
+    "width": 2000,
+    "height": 1245,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1732552119020-c4fa9919ae41"
+   },
+   {
+    "src": "/img/lavori/tinteggiatura-facciata/tinteggiatura-facciata-02-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1742900280864-bcc27353ceba"
+   },
+   {
+    "src": "/img/lavori/tinteggiatura-facciata/tinteggiatura-facciata-03-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1786339281681-fd3361b23c13"
+   }
+  ],
+  "pavimentazione-terrazzo": [
+   {
+    "src": "/img/lavori/pavimentazione-terrazzo/pavimentazione-terrazzo-01-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1697421472608-84e71a8a24b1"
+   },
+   {
+    "src": "/img/lavori/pavimentazione-terrazzo/pavimentazione-terrazzo-02-1200.jpg",
+    "width": 2000,
+    "height": 1755,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1711098256574-7b497260cdc9"
+   }
+  ],
+  "nuova-costruzione": [
+   {
+    "src": "/img/lavori/nuova-costruzione/nuova-costruzione-01-1200.jpg",
+    "width": 2000,
+    "height": 2462,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1787672357958-e2c0e4126066"
+   },
+   {
+    "src": "/img/lavori/nuova-costruzione/nuova-costruzione-02-1200.jpg",
+    "width": 2000,
+    "height": 1101,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1787672358060-37f5e39e2f61"
+   },
+   {
+    "src": "/img/lavori/nuova-costruzione/nuova-costruzione-03-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1704742950992-9815a104820c"
+   }
+  ],
+  "manutenzione-facciata": [
+   {
+    "src": "/img/lavori/manutenzione-facciata/manutenzione-facciata-01-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1653587193489-f1867b3ffd60"
+   },
+   {
+    "src": "/img/lavori/manutenzione-facciata/manutenzione-facciata-02-1200.jpg",
+    "width": 2000,
+    "height": 1331,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1646608220368-c604d8e8130f"
+   },
+   {
+    "src": "/img/lavori/manutenzione-facciata/manutenzione-facciata-03-1200.jpg",
+    "width": 2000,
+    "height": 3008,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1542350880924-09225f70e026"
+   }
+  ],
+  "pietra-viva": [
+   {
+    "src": "/img/lavori/pietra-viva/pietra-viva-01-1200.jpg",
+    "width": 2000,
+    "height": 3020,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1727819584099-772894afd8e9"
+   },
+   {
+    "src": "/img/lavori/pietra-viva/pietra-viva-02-1200.jpg",
+    "width": 2000,
+    "height": 1389,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1784528780206-6a0545dec6fd"
+   }
+  ],
+  "stucco-veneziano": [
+   {
+    "src": "/img/lavori/stucco-veneziano/stucco-veneziano-01-1200.jpg",
+    "width": 2000,
+    "height": 3556,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1708894462826-ba3fa93b41b7"
+   },
+   {
+    "src": "/img/lavori/stucco-veneziano/stucco-veneziano-02-1200.jpg",
+    "width": 2000,
+    "height": 2819,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1639430257115-f63af9eab97d"
+   },
+   {
+    "src": "/img/lavori/stucco-veneziano/stucco-veneziano-03-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1555181937-efe4e074a301"
+   }
+  ],
+  "marmi-e-mosaici": [
+   {
+    "src": "/img/lavori/marmi-e-mosaici/marmi-e-mosaici-01-1200.jpg",
+    "width": 2000,
+    "height": 2000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1736770525501-60f6a4b70e9d"
+   },
+   {
+    "src": "/img/lavori/marmi-e-mosaici/marmi-e-mosaici-02-1200.jpg",
+    "width": 2000,
+    "height": 2988,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1654463928352-5b50eb452d70"
+   }
+  ],
+  "pittura-antimuffa": [
+   {
+    "src": "/img/lavori/pittura-antimuffa/pittura-antimuffa-01-1200.jpg",
+    "width": 2000,
+    "height": 1333,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1745665777586-09381ba528d6"
+   },
+   {
+    "src": "/img/lavori/pittura-antimuffa/pittura-antimuffa-02-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1717281234297-3def5ae3eee1"
+   },
+   {
+    "src": "/img/lavori/pittura-antimuffa/pittura-antimuffa-03-1200.jpg",
+    "width": 2000,
+    "height": 3000,
+    "widths": [
+     480,
+     800,
+     1200,
+     1600,
+     2000
+    ],
+    "drawing": false,
+    "unsplash": "1742900280861-32bed068938b"
+   }
+  ]
+ },
+ "team": {
+  "membro-1": {
+   "width": 1002,
+   "height": 897
+  },
+  "membro-2": {
+   "width": 640,
+   "height": 640
+  }
+ }
+}

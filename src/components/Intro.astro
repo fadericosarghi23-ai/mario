@@ -1,0 +1,27 @@
+---
+/**
+ * Intro d'apertura con il logo: la casa si disegna, compare il nome, poi il pannello sale e scopre la pagina.
+ * Parte solo alla prima pagina della visita (sessionStorage, impostato in <head> da Layout.astro con la
+ * classe html.intro-on, così non lampeggia nelle visite successive). Senza JS non compare.
+ * Con "riduci animazioni" la regola globale di global.css la porta a durata quasi nulla.
+ */
+import { site } from '../data/site';
+---
+<div class="intro" aria-hidden="true">
+  <div class="intro-inner">
+    <svg class="intro-casa" viewBox="0 0 64 64" width="96" height="96" fill="none">
+      <path d="M6 30 32 8l26 22M12 25v33h40V25M26 58V40h12v18" pathLength="1" stroke="currentColor" stroke-width="2.6" stroke-linejoin="miter" />
+    </svg>
+    <p class="intro-nome">Impresa Edile <em>Mario</em></p>
+    <p class="intro-sotto">{site.indirizzo.citta} · Ristrutturazioni</p>
+  </div>
+</div>
+<script is:inline>
+(function () {
+  var html = document.documentElement, intro = document.querySelector('.intro');
+  if (!intro || !html.classList.contains('intro-on')) return;
+  var fine = function () { html.classList.remove('intro-on'); };
+  intro.addEventListener('animationend', function (e) { if (e.target === intro) fine(); });
+  setTimeout(fine, 4000);
+})();
+</script>

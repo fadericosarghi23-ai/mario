@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Picture from '../components/Picture.astro';
+import Icon from '../components/Icon.astro';
+import ProcessCards from '../components/ProcessCards.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import MapEmbed from '../components/MapEmbed.astro';
+import Cta from '../components/Cta.astro';
+import { site } from '../data/site';
+import { servizi } from '../data/servizi';
+import { team } from '../data/team';
+import { progetti, progetto } from '../data/progetti';
+import { heroSlides, progettiHome, numeriHome, aree } from '../data/contenuti';
+
+const title = 'Impresa Edile Mario | Ristrutturazioni e tinteggiature a Savona';
+const description = site.descrizione;
+const fotoStudio = progetto('ristrutturazione-appartamento').immagini[2];
+// FAQ: nel sito di partenza non c'erano → sezione e FAQPage non rese (src/data/contenuti.ts → faq).
+---
+<Layout title={title} description={description} transparent>
+<section class="hero" aria-label="Lavori in evidenza"> <div class="hero-slides" data-hero> {heroSlides.map((s, i) => <figure class:list={['hero-slide', { 'is-active': i === 0 }]} data-title={s.titolo} data-location={s.luogo} data-href={s.href}> <Picture img={s.img} eager={i === 0} class="full-img" /> </figure>)} </div> <div class="container hero-content"> <p class="eyebrow-light mb-3">{site.nome} · {site.attivita} · {site.indirizzo.citta} e provincia</p> <h1 class="h1">Ristrutturazioni e finiture <em>a Savona e provincia</em></h1> <div class="hero-meta"> <div> <p class="lead">Ristrutturazioni complete, tinteggiature e opere edili per case, negozi e aziende. Preventivo gratuito e budget concordato rispettato.</p> <div class="btn-row"> <a href="/progetti/" class="btn btn-primary">Vedi i lavori</a> <a href="/contatti/#richiesta" class="btn btn-outline-light">Preventivo gratuito</a> </div> </div> <div class="hero-caption" aria-live="polite"> <span class="label">In foto</span> <a href={heroSlides[0].href} class="link-underline" data-hero-caption>{heroSlides[0].titolo} · {heroSlides[0].luogo}</a> <div class="hero-dots" role="group" aria-label="Scegli l’immagine"> {heroSlides.map((s, i) => <button type="button" aria-label={`Mostra ${s.titolo}`} aria-current={i === 0 ? 'true' : 'false'} data-dot={i}></button>)} </div> </div> </div> </div> </section>
+
+<section class="section"> <div class="container split"> <div class="reveal"> <div class="ratio-45"> <Picture img={fotoStudio} sizes="(min-width: 1024px) 38vw, 92vw" /> </div> </div> <div class="reveal"> <p class="eyebrow mb-2">L’impresa</p> <h2 class="h2">Un punto di riferimento per l’edilizia a Savona</h2> <div class="prose mt-3 lead"> <p>Interventi su immobili residenziali, commerciali e industriali: dalle ristrutturazioni interne ed esterne alla tinteggiatura professionale.</p> <p>Attrezzature moderne, materiali di alta qualità e tempi rapidi di esecuzione, nel pieno rispetto delle normative e degli standard di sicurezza.</p> </div> <div class="stats mt-4"> {numeriHome.map((s) => <div class="stat"><strong>{s.n}</strong><span>{s.label}</span></div>)} </div> <a href="/studio/" class="btn btn-outline mt-4">Chi siamo</a> </div> </div> </section>
+
+<section class="section bg-sand"> <div class="container"> <div class="section-head reveal"> <div> <p class="eyebrow mb-2">Servizi</p> <h2 class="h2">Dal piccolo intervento alla ristrutturazione completa</h2> <p class="lead mt-2">Sei servizi, con consulenza personalizzata e preventivo gratuito.</p> </div> <a href="/servizi/" class="btn btn-outline">Tutti i servizi</a> </div> <ul class="services services-3 reveal"> {servizi.map((s) => <li class="service"> <Icon name={s.icona} class="icon" /> <h3 class="h4"><a href={`/servizi/#${s.id}`} class="link-underline">{s.nome}</a></h3> <p>{s.breve}</p> </li>)} </ul> </div> </section>
+
+<section class="section"> <div class="container"> <div class="section-head reveal"> <div> <p class="eyebrow">Metodo</p> <h2 class="h2">Come lavoriamo</h2> </div> <a href="/metodo/" class="text-link link-underline">Il nostro metodo</a> </div> <ProcessCards /> </div> </section>
+
+<section class="section" style="padding-top: 0"> <div class="container"> <div class="section-head reveal"> <div> <p class="eyebrow">Lavori</p> <h2 class="h2">Interni, esterni e finiture</h2> </div> <a href="/progetti/" class="text-link link-underline">Tutti i lavori ({progetti.length})</a> </div> <div class="projects-grid"> {progettiHome.map((slug) => <ProjectCard p={progetto(slug)} />)} </div> </div> </section>
+
+<section class="section bg-ink"> <div class="container"> <div class="section-head reveal"> <div> <p class="eyebrow">Per chi lavoriamo</p> <h2 class="h2">Case, condomini, negozi e aziende</h2> <p class="lead mt-2" style="color: rgb(255 255 255 / 0.72)">Interventi su immobili residenziali, commerciali e industriali. Dalla sede di Savona lavoriamo in tutta la provincia.</p> </div> </div> <ul class="areas reveal"> {aree.map((a) => <li class="area"> <span>{a.conteggio}</span> <strong>{a.nome}</strong> <p>{a.comuni}</p> </li>)} </ul> </div> </section>
+
+<section class="section"> <div class="container"> <div class="section-head reveal"> <div> <p class="eyebrow">Il titolare</p> <h2 class="h2">Un referente per ogni lavoro</h2> <p class="lead mt-2">L’impresa di Shabanaj Erzen, con uno staff di professionisti qualificati.</p> </div> <a href="/studio/#team" class="text-link link-underline">Chi siamo</a> </div> <div class="team-strip reveal"> {team.slice(0, 7).map((m) => <a href={`/studio/#${m.id}`} title={`${m.nome}, ${m.ruolo}`}> <Picture img={m.foto} sizes="(min-width: 768px) 14vw, 33vw" /> </a>)} </div> </div> </section>
+
+
+<section class="section"> <div class="container grid-2"> <div class="reveal"> <p class="eyebrow mb-2">Dove siamo</p> <h2 class="h2">{site.nome} a {site.indirizzo.citta}</h2> <p class="lead mt-3">La sede è in via Fratelli Canepa, a Savona. Lavoriamo in tutta la provincia: chiedici un preventivo gratuito.</p> <div class="contact-cards mt-4"> <div class="contact-card"> <h3>{site.indirizzo.citta}</h3> <p>{site.indirizzo.via}<br>{site.indirizzo.cap} {site.indirizzo.citta} ({site.indirizzo.provincia}), Italia</p> <a href={site.mapsUrl} target="_blank" rel="noopener" class="text-link link-underline mt-1" style="display:inline-block">Indicazioni stradali</a> </div> <div class="contact-card"> <h3>Preventivo</h3> <p>Gratuito e senza impegno,<br>a Savona e in tutta la provincia</p> <a href="/contatti/#richiesta" class="text-link link-underline mt-1" style="display:inline-block">Richiedilo ora</a> </div> <div class="contact-card"> <h3>Contatti</h3> {site.telefono && <p><a href={`tel:${site.telefonoE164}`}>{site.telefono}</a></p>} <p><a href={`mailto:${site.email}`}>{site.email}</a></p> </div> </div> </div> <div class="map reveal"> <MapEmbed span={0.012} /> </div> </div> </section>
+<Cta />
+<script>
+var e=document.querySelector(`[data-hero]`);if(e){let t=[...e.querySelectorAll(`.hero-slide`)],n=[...document.querySelectorAll(`[data-dot]`)],r=document.querySelector(`[data-hero-caption]`),i=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches,a=0,o,s=e=>{t[a].classList.remove(`is-active`),n[a].setAttribute(`aria-current`,`false`),a=(e+t.length)%t.length;let i=t[a];i.querySelectorAll(`img`).forEach(e=>e.setAttribute(`loading`,`eager`)),i.classList.add(`is-active`),n[a].setAttribute(`aria-current`,`true`),r&&(r.textContent=`${i.dataset.title} · ${i.dataset.location}`,r.href=i.dataset.href||`#`)},c=()=>{i||(o=window.setInterval(()=>s(a+1),6e3))};n.forEach((e,t)=>e.addEventListener(`click`,()=>{window.clearInterval(o),s(t),c()})),window.addEventListener(`load`,()=>t.forEach(e=>e.querySelectorAll(`img`).forEach(e=>e.setAttribute(`loading`,`eager`)))),c()}
+</script>
+</Layout>
